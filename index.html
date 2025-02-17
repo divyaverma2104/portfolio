@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar Gradient */
+        .bg-gradient {
+            background: linear-gradient(90deg, #ff6f61, #fcb045);
+        }
+
+        /* Hero Section Image */
+        .hero-img {
+            border-radius: 50%;
+            border: 5px solid #302c2c;
+            width: 180px;
+            height: 180px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: white;
+            color: #fff;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #303131;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .nav-item {
+            margin-right: 30px;
+            color: rgb(207, 177, 145);
+            background-color: rgb(213, 126, 88);
+            border-radius: 8px;
+        }
+
+        #nav {
+            background-color: rgba(152, 86, 57);
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            top: 0;
+            box-shadow: 0 8px 30px rgb(225, 190, 160);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .bg-gradient {
+            background: #2C3E50;
+            /* Professional dark blue */
+            color: #fff;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fffefe;
+            font-weight: 300;
+            transition: color 0.3s;
+
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #0a0a0a;
+            /* Teal hover effect */
+        }
+
+        .navbar-brand {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+                url('https://wallpapercave.com/wp/wp7453711.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 200px 40px;
+        }
+
+        .hero-img {
+            border-radius: 50%;
+            border: 5px solid #070707;
+            /* Teal border for a professional touch */
+            width: 180px;
+            height: 180px;
+        }
+
+        .btn-outline-light {
+            border-color: #fafcfc;
+            color: #fafdfc;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background-color: #c1762c;
+            color: #fff;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fbfcfd;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2C3E50;
+            /* Dark blue for section headers */
+        }
+
+        #about p {
+            font-size: 1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #fbfcfd;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .skills h2{
+            color: #092469;
+        }
+
+        .skills .bi {
+            font-size: 3rem;
+            color: #1ABC9C;
+            margin-bottom: 15px;
+        }
+
+        .skills h5 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #092469;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #ffffff;
+            padding: 60px 20px;
+        }
+
+        #projects .section-title {
+            color: #2C3E50;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2C3E50;
+        }
+
+        .btn-outline-primary {
+            color: #1ABC9C;
+            border-color: #1ABC9C;
+            font-weight: 500;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #1ABC9C;
+            color: #fff;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section  justify-content-center align-items-center text-center text-white"
+        style="height: 100vh; background: url('https://wallpapercave.com/wp/wp7453711.jpg') center/cover no-repeat;">
+        <img src="photo.jpeg" alt="Your Picture" class="hero-img mb-4">
+        <h1 class="display-4">Hi, I'm Divya Verma</h1>
+        <p class="lead">Front-end Developer | Creative Designer | Problem Solver</p>
+        <a href="https://drive.google.com/file/d/1q97DVbeuG6ZRoi7SK3IxbN01mJaiayOc/view?usp=sharing" download
+            class="btn btn-outline-light btn-lg mt-3">Download My Resume</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <h2 class="section-title mb-4">About Me</h2>
+        <p>I’m deeply passionate about learning, with a particular interest in coding and interpersonal
+            communication. In my free time, I enjoy exploring new places, which helps me stay curious and adaptable,
+            as well as painting and dancing, which foster creativity and discipline. These hobbies keep me balanced
+            and offer a fresh perspective to my problem-solving skills.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills py-5 text-center text-white">
+        <h2 class="section-title mb-4">My Skills</h2>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <i class="bi bi-braces display-4 text-primary"></i>
+                <h5 class="mt-2">HTML & CSS</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <i class="bi bi-bootstrap display-4 text-success"></i>
+                <h5 class="mt-2">Bootstrap</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <i class="bi bi-code-square display-4 text-info"></i>
+                <h5 class="mt-2">JavaScript</h5>
+            </div>
+            <div class="col-md-3 mb-3">
+                <i class="bi bi-terminal display-4 text-warning"></i>
+                <h5 class="mt-2">Google Workspace</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="py-5">
+    <h2 class="section-title text-center mb-4">My Projects</h2>
+    <div class="container">
+        <div class="row flex-nowrap overflow-auto">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://www.travelturtle.world/wp-content/uploads/2024/03/6585d85934a171a9a052c170_traveling-based-on-fare-deals.jpeg" class="card-img-top" alt="Travel">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Travel</h5>
+                        <a href="https://divyaverma2104.github.io/travel/" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://www.game-learn.com/wp-content/uploads/2021/08/Problems-with-Task-Management-7-Tips-for-Managing-your-To-do-list-1.jpg" class="card-img-top" alt="To-Do List">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">To-Do List</h5>
+                        <a href="https://divyaverma2104.github.io/To_Do_List/" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2jzRNqu_k3m0nIpm5rTLUMHFqsZmQrGiqQ&s" class="card-img-top" alt="Budget Tracker">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Budget Tracker</h5>
+                        <a href="https://divyaverma2104.github.io/Budget-Tracker/" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects here in the same format -->
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+            <div class="row">
+                <!-- Quick Links on the left -->
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Me on the right -->
+                <div class="col-md-6">
+                    <h5>Contact Me</h5>
+                    <p>Email: divyaverma24@navgurukul.org</p>
+                    <p>Phone: +91 9993556569</p>
+                    <p>Address: Mahaveer nagar, Raipur, Chhattisgarh</p>
+
+                    <p>Message me directly, and I'll get back to you via email!<a href=contact.html>Contact Me</a></p>
+                </div>
+            </div>
+            <p>&copy; 2024 My Portfolio | Designed by Divya Verma</p>
+    </footer>
+    
+</body>
+
+</html>
